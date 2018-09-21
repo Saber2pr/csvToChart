@@ -36,6 +36,16 @@
     </body>
     <script>
         require(["csvToChart"], function(csvToChart){
+            var varCsv = csvToChart.heredoc(function(fn){
+                data1,data2
+                1,15
+                6,12
+                3,13
+                4,14
+                5,15
+                6,16                       
+            })
+            csvToChart.createChartUseVar("chart", varCsv)
             csvToChart.initData("fileInput", "chart")
             csvToChart.configBtn("chart", "btn1")
             csvToChart.configBtn("chart", "btn2", "donut")
