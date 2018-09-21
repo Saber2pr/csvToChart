@@ -16,7 +16,7 @@
  * ```js
  *  //AMD规范，请求模块csvToChart实例
     require(["csvToChart"], function(csvToChart){
-        //初始化，绑定上传按钮和图标id
+        //初始化，绑定上传按钮和图表id
         csvToChart.initData("fileInput", "chart")
         //绑定图表、对应按钮和图表类型
         csvToChart.configBtn("chart", "aBtn", "donut")
@@ -24,6 +24,7 @@
     })
    ```     
  * types:
+ * (可用类型)
  *  ""
  *  "donut"
  *  "bar"
@@ -61,7 +62,7 @@ define(["c3"], function(c3){
         c3.generate({
             bindto: "#"+chartId,
             data:{
-                columns:data,
+                rows:data,
                 type:type
             }
         })
