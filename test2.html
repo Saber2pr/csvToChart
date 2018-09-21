@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+    <title>test1</title>
+    <head>
+        <link href="./lib/c3.min.css" rel="stylesheet">
+        <link href="./lib/style.css" rel="stylesheet">
+        <script src="./lib/require.js"></script>
+        <script src="./main.js"></script>
+    </head>
+    <body>
+        <input type="file" id="fileInput">
+        <center>
+            <a id="btn1">折线图</a>
+            <a id="btn2">甜甜圈图表</a>
+            <a id="btn3">样条图</a>
+            <a id="btn4">步骤图</a>
+            <a id="btn5">面积图</a>
+            <a id="btn6">堆叠面积图</a>
+            <a id="btn7">柱状图</a>
+            <a id="btn8">散点图</a>
+            <a id="btn9">饼形图</a>
+            <a id="btn10">仪表图</a>
+            <hr>
+            <div id="chart"></div>
+        </center>
+        <div id="author" align="center">_by_AK-12_saber2pr@gmail.com</div>
+    </body>
+    <script>
+        require(["csvToChart"], function(csvToChart){
+            csvToChart.initData("fileInput", "chart")
+            csvToChart.configBtn("chart", "btn1")
+            csvToChart.configBtn("chart", "btn2", "donut")
+            csvToChart.configBtn("chart", "btn3", "spline")
+            csvToChart.configBtn("chart", "btn4", "step")
+            csvToChart.configBtn("chart", "btn5", "area")
+            csvToChart.configBtn("chart", "btn6", "area-spline")
+            csvToChart.configBtn("chart", "btn7", "bar")
+            csvToChart.configBtn("chart", "btn8", "scatter")
+            csvToChart.configBtn("chart", "btn9", "pie")
+            csvToChart.configBtn("chart", "btn10", "gauge")
+        })
+    </script>                                               
+</html>
+

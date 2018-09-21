@@ -1,0 +1,14 @@
+body{
+    background-color:#a0d9cf
+}
+a{
+    color:white;
+    background-color:grey
+}
+#author{
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    color:grey;
+}

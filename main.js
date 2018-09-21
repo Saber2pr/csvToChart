@@ -1,0 +1,14 @@
+require.config({
+    baseUrl:"./lib",
+    paths:{
+        d3:"d3-5.4.0.min",
+        c3:"c3.min",
+        csvToChart:"csvToChart"
+    },
+    shim:{
+        c3:{
+            deps:["d3"],
+            exports:"c3.min"
+        },
+    }
+})
