@@ -14,7 +14,7 @@
     data2,11,12,13,14,15,16
    ```
  * ```js
- *  //AMD规范，请求模块csvToChart实例
+ *  //1. AMD规范，请求模块csvToChart实例
     require(["csvToChart"], function(csvToChart){
         //初始化，绑定上传按钮和图表id
         csvToChart.initData("fileInput", "chart")
@@ -22,6 +22,18 @@
         csvToChart.configBtn("chart", "aBtn", "donut")
         csvToChart.configBtn("chart", "bBtn", "bar")
     })
+    //2. 直接加载文本
+    var varCsv = 
+    csvToChart.heredoc(function(fn){
+        data1,data2
+        892 ,1072 
+        942 ,1389 
+        945 ,963 
+        955 ,913 
+        825 ,857 
+        852 ,743
+    }
+    csvToChart.createChartUseVar("chart", varCsv)
    ```     
  * types:
  * (可用类型)
@@ -86,6 +98,9 @@ define(["c3"], function(c3){
             return
         }
     }
+    function _heredoc(fn){
+        return fn.toString().split('\n').slice(1,-1).join('\n') + '\n'
+    }
     return {
         initData: function(inputId, chartId){
             document.querySelector("#"+inputId).addEventListener(
@@ -98,6 +113,13 @@ define(["c3"], function(c3){
             "mouseenter", function(){
                 _createOnEvent(type, chartId)
             })
+        },
+        createChartUseVar: function(chartId, varCsv, type){
+            _set(_parseString(varCsv))
+            _draw(chartId, _get(), type)
+        },
+        heredoc: function(fn) {
+            return _heredoc(fn)
         }
     }
 })
