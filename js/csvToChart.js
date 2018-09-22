@@ -10,9 +10,14 @@
  * @example
  * ```csv
  *  (csv格式)
-    data1,1,2,3,4,5,6
-    data2,11,12,13,14,15,16
-   ```
+    data1,data2
+    1,15
+    6,12
+    3,13
+    4,14
+    5,15
+    6,16
+ * ```
  * ```js
  *  //1. AMD规范，请求模块csvToChart实例
     require(["csvToChart"], function(csvToChart){
