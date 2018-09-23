@@ -11,10 +11,7 @@
                 }
             }catch(e){}
         </script>
-        <link href="./css/c3.min.css" rel="stylesheet">
         <link href="./css/style.css" rel="stylesheet">
-        <script src="./js/lib/require.js"></script>
-        <script src="./main.js"></script>
     </head>
     <body>
         <input type="file" id="fileInput">
@@ -34,30 +31,7 @@
         </center>
         <div id="author" align="center">_by_AK-12_saber2pr@gmail.com</div>
     </body>
-    <script>
-        require(["csvToChart"], function(csvToChart){
-            var varCsv = csvToChart.heredoc(function(fn){
-                data1,data2
-                1,15
-                6,12
-                3,13
-                4,14
-                5,15
-                6,16                       
-            })
-            csvToChart.createChartUseVar("chart", varCsv)
-            csvToChart.initData("fileInput", "chart")
-            csvToChart.configBtn("chart", "btn1")
-            csvToChart.configBtn("chart", "btn2", "donut")
-            csvToChart.configBtn("chart", "btn3", "spline")
-            csvToChart.configBtn("chart", "btn4", "step")
-            csvToChart.configBtn("chart", "btn5", "area")
-            csvToChart.configBtn("chart", "btn6", "area-spline")
-            csvToChart.configBtn("chart", "btn7", "bar")
-            csvToChart.configBtn("chart", "btn8", "scatter")
-            csvToChart.configBtn("chart", "btn9", "pie")
-            csvToChart.configBtn("chart", "btn10", "gauge")
-        })
-    </script>                                               
+    <script src="./js/config.js"></script>
+    <script src="./dist/bundle.js"></script>                                               
 </html>
 
