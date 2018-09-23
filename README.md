@@ -2,9 +2,9 @@
 convert csv to chart in different format quickly!
 * [Have a try](https://saber2pr.github.io/csvToChart/)
 * [Download source](https://github.com/Saber2pr/csvToChart/archive/webpack-format.zip)
-## csv
+* csv
 ![loadingImage...](https://github.com/Saber2pr/MyWeb/blob/master/resource/csvToChart.jpg)
-## variable
+* variable
 ![loadingImage...](https://github.com/Saber2pr/MyWeb/blob/master/resource/csvToChartConfig.jpg)
 ## chart
 ![loadingImage...](https://github.com/Saber2pr/MyWeb/blob/master/resource/csvToChartView.jpg)
