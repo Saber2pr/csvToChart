@@ -1,0 +1,28 @@
+{
+  "name": "csvtochart",
+  "version": "1.0.0",
+  "description": "csv to charts",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "c3": "^0.6.7",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saber2pr/csvToChart.git"
+  },
+  "author": "AK-12",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saber2pr/csvToChart/issues"
+  },
+  "homepage": "https://github.com/Saber2pr/csvToChart#readme"
+}
