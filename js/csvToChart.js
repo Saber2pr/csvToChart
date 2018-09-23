@@ -32,8 +32,9 @@
  *  "pie"
  *  "gauge"
  */
-import d3 from './lib/d3-5.4.0.min.js'
-import c3 from './lib/c3.min.js'
+import * as d3 from 'd3'
+import * as c3 from 'c3'
+require("../css/c3.min.css")
 
 var _result = null
 
@@ -94,25 +95,32 @@ function _heredoc(fn){
     return fn.toString().split('\n').slice(1,-1).join('\n') + '\n'
 }
 
-export let initData = function(inputId, chartId){
+let initData = function(inputId, chartId){
     document.querySelector("#"+inputId).addEventListener(
             "change", function(event){
                 _init(event.target, chartId)
             })            
 }
 
-export let configBtn = function(chartId, btnId, type){
+let configBtn = function(chartId, btnId, type){
     document.querySelector("#"+btnId).addEventListener(
             "mouseenter", function(){
                 _createOnEvent(type, chartId)
             })
 }
 
-export let createChartUseVar = function(chartId, varCsv, type){
+let createChartUseVar = function(chartId, varCsv, type){
     _set(_parseString(varCsv))
         _draw(chartId, _get(), type)
 }
 
-export let heredoc = function(fn) {
+let heredoc = function(fn) {
     return _heredoc(fn)
+}
+
+export var csvToChart = {
+    initData:initData,
+    configBtn:configBtn,
+    createChartUseVar:createChartUseVar,
+    heredoc:heredoc,
 }
