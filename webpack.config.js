@@ -1,5 +1,5 @@
 const path = require('path');
- 
+
 module.exports = {
   entry: './js/main.js',
   output: {
@@ -11,6 +11,10 @@ module.exports = {
       test: /\.css$/,
       use: ['style-loader','css-loader']
     }]
+  },
+  devServer:{
+      open:true,
+      compress: true
   },
 };
 
